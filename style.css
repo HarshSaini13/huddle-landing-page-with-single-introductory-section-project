@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --softMagenta: hsl(300, 69%, 71%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--violet);
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 2.2em;
+    min-height: 100vh;
+}
+
+.logo > img {
+    width: 40%;
+    max-width: 200px;
+    margin-bottom: 3em;
+}
+
+.wrapper2 {
+    display: grid;
+    grid-gap: 3em;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.illustration > img {
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0px;
+    color: white;
+    font-weight: 600;
+    font-size: 27px;
+    text-align: center;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 2.7em;
+}
+
+.btn {
+    background-color: white;
+    color: var(--violet);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 0.9em 5.5em;
+    border-radius: 3em;
+    box-shadow: 0px 5px 5px hsl(257, 61%, 40%);
+    transition: all 300ms;
+}
+
+.btn:hover, .btn:focus {
+    background-color: var(--softMagenta);
+    color: white;
+}
+
+.button {
+    text-align: center;
+}
+
+.socialMedia {
+    margin-top: 6em;
+    text-align: center;
+}
+
+i {
+    margin: 5px;
+    color: white;
+}
+
+i:focus, i:hover {
+    color: var(--softMagenta);
+    cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+
+    body {
+        background-image: url(images/bg-desktop.svg);
+        background-size: cover;
+        overflow: hidden;
+        background-position: right center;
+    }
+
+    .wrapper2 {
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: center;
+    }
+
+    h1 {
+        text-align: left;
+        font-size: 40px;
+    }
+    p{
+        text-align: left;
+    }
+    .button {
+        text-align: left;
+    }
+    .btn {
+        padding: 0.9em 4em;
+    }
+    .socialMedia {
+        position: absolute;
+        right: 50px;
+        bottom: 30px;
+    }
+}
